@@ -43,9 +43,14 @@ terraform-aws/
     |   └── outputs.tf
     |
     |── VPC
+    |    ├── main.tf
+    |    ├── variables.tf
+    |    └── outputs.tf
+    |
+     ── Security_group
         ├── main.tf
         ├── variables.tf
-        └── outputs.tf
+        └── outputs.tf    
 ```
 
 
@@ -83,11 +88,13 @@ terraform workspace new stg
 terraform workspace new prod
 4. Select Workspace
 terraform workspace select dev
-5. Plan Infrastructure
+5. Validate
+terraform validate
+6. Plan Infrastructure
 terraform plan
-6. Apply Infrastructure
+7. Apply Infrastructure
 terraform apply
-7. Destroy Infrastructure (if needed)
+8. Destroy Infrastructure (if needed)
 terraform destroy
 🔄 Switching Environments
 terraform workspace select stg
@@ -104,7 +111,7 @@ backend "s3" {
 🔑 Prerequisites
 Terraform >= 1.5
 AWS CLI configured (aws configure)
-Existing EC2 Key Pair (e.g. prod-server-key)
+Existing EC2 Key Pair (e.g. my-key) you can genrate if from local system as well,and copy the same key file while creating infa 
 S3 bucket for Terraform state
 DynamoDB table for state locking
 🏷️ Tagging Strategy
