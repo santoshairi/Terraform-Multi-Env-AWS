@@ -1,0 +1,16 @@
+# Terraform cache (ALL folders, recursive)
+**/.terraform/*
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+
+# Crash logs
+crash.log
+
+# Sensitive variables
+*.tfvars
+*.tfvars.json
+
+# Ignore lock file (optional - depends on team policy)
+.terraform.lock.hcl
